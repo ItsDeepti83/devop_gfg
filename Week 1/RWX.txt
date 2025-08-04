@@ -1,0 +1,28 @@
+Permissions
+R: 4 (Read)
+W: 2 (Write)
+X: 1 (Execute)
+
+4+2+1 = 7
+
+user, group, others
+
+pranjal, dev, others
+
+0: no R, W, X
+1: X
+2: W
+3: W+X
+4: R
+5: R+X
+6: R+W
+7: R+W+X
+
+777: pranjal, dev, others R+W+X
+700: pranjal R+W+X
+170: pranjal X, dev group R+W+X, others 0
+171:pranjal X, dev group R+W+X, others X
+
+-rw-rw-r--
+pranjal, group, other
+664

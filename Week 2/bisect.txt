@@ -1,0 +1,75 @@
+Step-by-step Demo
+
+1. Init a repo
+mkdir bisect-demo
+cd bisect-demo
+git init
+
+2. Make an initial file
+echo "Hello, world!" > main.txt
+git add main.txt
+git commit -m "Initial commit: print Hello, world!"
+
+3. Make more "good" commits
+echo "Hello again!" >> main.txt
+git add main.txt
+git commit -m "Add second line: Hello again!"
+echo "All systems go." >> main.txt
+git add main.txt
+git commit -m "Add third line: All systems go."
+
+4. Introduce a "bad" commit (simulate a bug)
+
+echo "ERROR: Something broke." >> main.txt
+git add main.txt
+git commit -m "Oops, introduced a bug"
+
+5. Add more commits after the bug
+echo "Keep moving forward." >> main.txt
+git add main.txt
+git commit -m "Add positive message"
+
+6. Simulate: Find the bug with git bisect
+Suppose the bug is:
+
+The file contains "ERROR".
+
+A. Start bisect
+
+git bisect start
+B. Mark current commit as bad
+
+git bisect bad
+C. Mark the initial commit as good (get the hash first):
+
+git log --oneline  # Note the hash of "Initial commit..."
+git bisect good <hash-of-initial-commit>
+(Replace <hash-of-initial-commit> with the real commit hash you see.)
+
+D. Now test each commit
+Check if "ERROR" is in the file:
+
+
+cat main.txt
+# If "ERROR" is there: git bisect bad
+# If NOT: git bisect good
+Repeat as prompted by Git.
+
+E. When done, reset
+
+git bisect reset
+Automating the test
+You can automate the check using a shell script:
+
+Create test.sh:
+
+
+echo '! grep ERROR main.txt' > test.sh
+chmod +x test.sh
+Run git bisect with script:
+
+git bisect start
+git bisect bad
+git bisect good <hash-of-initial-commit>
+git bisect run ./test.sh
+git bisect reset

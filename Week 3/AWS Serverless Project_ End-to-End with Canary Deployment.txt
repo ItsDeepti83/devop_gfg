@@ -1,0 +1,5 @@
+curl --ssl-no-revoke -X POST https://uymfbmd00m.execute-api.us-east-1.amazonaws.com/items ^
+  -H "Content-Type: application/json" ^
+  -d "{\"id\": \"123\", \"name\": \"Test Item\"}"
+
+curl --ssl-no-revoke "https://uymfbmd00m.execute-api.us-east-1.amazonaws.com/items?id=123"

@@ -1,0 +1,9 @@
+<Context>
+  <!-- Example: MySQL DataSource -->
+  <Resource name="jdbc/MyDB" auth="Container"
+            type="javax.sql.DataSource"
+            maxTotal="50" maxIdle="20"
+            username="dbuser" password="dbpass"
+            driverClassName="com.mysql.cj.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/mydb"/>
+</Context>

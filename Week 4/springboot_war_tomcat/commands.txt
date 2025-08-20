@@ -1,0 +1,12 @@
+docker build -t my-war-app .
+docker run -it -p 8080:8080 --rm -v %cd%:/app -w /app my-war-app bash
+
+docker run -it --rm -v %cd%:/app -w /app my-war-app bash
+mvn clean package -DskipTests
+
+docker build -t my-war-on-tomcat -f Dockerfile.tomcat .
+docker run --name tomcat-app -p 8080:8080 -d my-war-on-tomcat
+# Open http://localhost:8080
+
+docker run --name tomcat-app -p 8080:8080 -d   -v "$PWD/target/<your-app>.war:/usr/local/tomcat/webapps/ROOT.war"   tomcat:10.1-jdk17-temurin
+# Open http://localhost:8080

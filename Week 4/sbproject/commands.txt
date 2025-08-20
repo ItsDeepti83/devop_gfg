@@ -1,0 +1,25 @@
+mvn clean
+Deletes the target/ directory (removes compiled classes, JARs, etc.). Always good before a fresh build.
+
+mvn compile
+Compiles the source code of the project (src/main/java)
+
+mvn test
+Runs tests in src/test/java using a test framework like JUnit or TestNG.
+
+mvn package
+Compiles, tests, and packages the code into a deliverable format (e.g., JAR, WAR).
+
+mvn install
+Builds the project and installs the artifact (JAR/WAR) into your local Maven repository (~/.m2/repository) so other projects on your machine can use it.
+
+
+mvn clean package – compile, test, and create the JAR/WAR in target/
+
+mvn clean install – same as above, plus install to your local ~/.m2 repo
+
+java -jar library-management-1.0.1-docker.jar
+
+mvn -v – check Maven/Java versions
+
+mvn dependency:tree – see deps/conflicts

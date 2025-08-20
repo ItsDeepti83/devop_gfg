@@ -1,0 +1,4 @@
+com/example/springbootwebapp/controller/UserController.class
+com/example/springbootwebapp/DemoApplication.class
+com/example/springbootwebapp/model/User.class
+com/example/springbootwebapp/repository/UserRepository.class

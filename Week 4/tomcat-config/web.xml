@@ -1,0 +1,18 @@
+<web-app>
+  <!-- Default MIME mappings -->
+  <mime-mapping>
+    <extension>html</extension>
+    <mime-type>text/html</mime-type>
+  </mime-mapping>
+
+  <!-- Default error page -->
+  <error-page>
+    <error-code>404</error-code>
+    <location>/errors/404.html</location>
+  </error-page>
+
+  <!-- Session timeout (in minutes) -->
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+</web-app>

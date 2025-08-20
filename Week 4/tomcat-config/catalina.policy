@@ -1,0 +1,9 @@
+// Allow applications to read temp directory
+grant codeBase "file:${catalina.base}/webapps/-" {
+    permission java.io.FilePermission "${java.io.tmpdir}", "read,write,delete";
+};
+
+// Restrict apps from reading sensitive files
+grant codeBase "file:${catalina.base}/webapps/-" {
+    permission java.io.FilePermission "/etc/passwd", "deny";
+};

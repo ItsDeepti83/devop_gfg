@@ -1,3 +1,9 @@
 https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
 https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
 https://community.jenkins.io/t/jenkins-installation-error/16610
+
+
+
+http://54.242.95.242:8080/github-webhook/ <--- GitSCM polling
+
+http://54.242.95.242:8080/job/test1/build?token=token name <---- Remote scripts

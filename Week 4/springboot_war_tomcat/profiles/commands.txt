@@ -1,0 +1,6 @@
+mvn clean package -Pdev
+mvn clean package -Ptest
+mvn clean package -Pprod
+
+
+mvn clean package -Pdev,logging

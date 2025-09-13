@@ -1,0 +1,15 @@
+    1  vi jenkis.sh
+    2  sudo sh jenkis.sh 
+    3  clear
+    4  pwd
+    5  cd .ssh
+    6  l
+    7  vi id_ed25519
+    8  ssh -i "id_ed25519" root@54.175.58.236
+    9  ls
+   10  cdmod 400 id_ed25519 
+   11  chmod 400 id_ed25519 
+   12  clear
+   13  ssh -i "id_ed25519" root@54.175.58.236
+   14  clear
+   15  history

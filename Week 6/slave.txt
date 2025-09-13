@@ -1,0 +1,34 @@
+ubuntu
+cd /opt
+sudo mkdir jenkins
+sudo chmod 755 jenkins/
+pwd --->/opt/jenkins
+
+
+sudo ssh-keygen
+
+sudo su -
+root
+
+ls
+pwd
+cd .ssh/
+ls
+cat id_ed25519
+cat id_ed25519.pub 
+sudo vi authorized_keys (copy public key)
+java
+sudo apt install -y openjdk-17-jdk
+java -version
+clear
+sudo apt update
+sudo apt-get install -y apt-transport-https ca-certificates curl
+sudo apt install docker.io -y
+sudo systemctl enable --now docker
+sudo  apt install python3.12-venv
+pip
+history
+
+
+non-verifying strategy
+

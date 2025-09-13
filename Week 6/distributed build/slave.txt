@@ -1,0 +1,30 @@
+root@ip-172-31-33-99:~/.ssh# history
+    1  whoami
+    2  clear
+    3  cd /opt/
+    4  ls
+    5  mkdir jenkins
+    6  chmod 755 jenkins/
+    7  ls -ltr
+    8  cd jenkins/
+    9  ls
+   10  pwd
+   11  hostname -I
+   12  hostname -i
+   13  cd ~
+   14  ssh-keygen
+   15  clear
+   16  pwd
+   17  ls -a
+   18  cd .ssh
+   19  ls
+   20  cat id_ed25519
+   21  cat id_ed25519.pub 
+   22  cat authorized_keys 
+   23  cat id_ed25519.pub >>authorized_keys 
+   24  cat authorized_keys 
+   25  clear
+   26  ls
+   27  cat id_ed25519
+   28  hostname -i
+   29  history
